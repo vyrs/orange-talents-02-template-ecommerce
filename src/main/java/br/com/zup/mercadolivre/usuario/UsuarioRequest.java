@@ -2,7 +2,6 @@ package br.com.zup.mercadolivre.usuario;
 
 import br.com.zup.mercadolivre.compartilhado.UniqueValue;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -17,9 +16,6 @@ public class UsuarioRequest {
     @NotBlank
     @Size(min = 6)
     private String senha;
-
-//    @Deprecated
-//    public UsuarioRequest() {}
 
     public UsuarioRequest(@NotBlank @Email String email, @NotBlank @Size(min = 6) String senha) {
         this.email = email;

@@ -1,5 +1,6 @@
 package br.com.zup.mercadolivre.usuario;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +20,9 @@ public class UsuarioController {
 
     @PostMapping
     @Transactional
-    public String salvar(@RequestBody @Valid UsuarioRequest request) {
+    public ResponseEntity<?> salvar(@RequestBody @Valid UsuarioRequest request) {
         Usuario usuario = request.toModel();
         manager.persist(usuario);
-        return usuario.toString();
+        return ResponseEntity.ok().build();
     }
 }
