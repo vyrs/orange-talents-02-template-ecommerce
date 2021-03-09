@@ -53,6 +53,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter  {
                     .antMatchers(HttpMethod.GET, "/produto/{id:[0-9]+}").permitAll()
                     .antMatchers(HttpMethod.POST, "/usuario").permitAll()
                     .antMatchers("/api/auth/**").permitAll()
+                    .antMatchers("/notas-fiscais").permitAll()
+                    .antMatchers("/ranking").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .cors()

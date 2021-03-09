@@ -8,7 +8,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /*
-* Essa clssa reune métodos uteis para opinioes.
+* Essa classe reune métodos uteis para opinioes.
  */
 public class Opinioes {
     private Set<Opiniao> opinioes;
